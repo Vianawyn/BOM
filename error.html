@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Error-404</title>
+	<link rel="stylesheet" href="css/error.css">
+</head>
+<body>
+	<div class="box">
+		<main>
+			<h3>错误提示</h3>
+			<p><span>5</span>s后跳转回登录页面</p>
+			<input type="submit" value="返回登录页面" class="submit" onclick="fanhui()">
+		</main>
+	</div>
+</body>
+</html>
+<script>
+	let span = document.querySelector('span');
+	let num = 5;
+	var t = setInterval(function(){
+		span.innerText = num;
+		num--;
+		if(num < 0){
+			clearInterval(t);
+			location.replace('loading.html');
+		}
+	},1000)
+	function fanhui(){
+		location.replace('loading.html');
+	}
+</script>

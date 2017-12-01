@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TOP</title>
+	<link rel="stylesheet" href="css/base.css">
+</head>
+<style>
+.box{
+	width:500px;
+	height: 10000px;
+	margin: 0 auto;
+	border: 2px solid red;
+}
+.top{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background: red;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	line-height: 80px;
+	text-align: center;
+	color: #fff;
+	font-weight: 700;
+}
+</style>
+<body>
+	<div class="box"></div>
+	<div class="top" onclick="top()">TOP</div>
+</body>
+</html>
+<script>
+	window.onload = function(){
+		let top = document.querySelector('.top');
+		top.style.display = 'none';
+		window.onscroll = function(){
+			if(document.body.scrollTop > 300){
+				top.style.display = 'block';
+			}else{
+				top.style.display = 'none';
+			}
+		}
+		top.onclick = function(){
+			window.scroll(0,0);
+		}
+	}
+	
+</script>

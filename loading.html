@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>loading</title>
+	<link rel="stylesheet" href="css/loading.css">
+</head>
+<body>
+	<div class="box">
+		<main>
+			<!-- <section><h2></h2></section> -->
+			<section>
+				<label for="">用户名:</label>
+				<input type="username" placeholder="请输入用户名" class="username" name="username" autofocus>
+			</section>
+			<section>
+				<label for="">密&nbsp;码:</label>
+				<input type="password" placeholder="请输入密码" class="pass" name="pass">
+			</section>	
+			<input type="submit" value="登录" class="submit" >
+		</main>
+	</div>
+</body>
+</html>
+<script>
+	let username = document.querySelector('.username');
+	let pass = document.querySelector('.pass');
+	let submit = document.querySelector('.submit');
+	submit.onclick = function(){
+		if(username.value.trim() == 'admin' && pass.value.trim() == '123456'){
+			alert('登录成功');
+		}else{
+			location.replace('error.html');
+		}
+	}
+	
+</script>

@@ -1,0 +1,55 @@
+/*
+* @Author: lenovo
+* @Date:   2017-12-01 14:51:24
+* @Last Modified by:   lenovo
+* @Last Modified time: 2017-12-01 23:11:06
+*/
+@import url('base.css');
+.box{
+	width:100%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, .7);
+	position: relative;
+}
+main{
+	width: 400px;
+	height: 230px;
+	background: #fff;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	border-radius: 20px;
+	padding: 50px;
+}
+.title{
+	margin: 20px auto 10px; 
+}
+section{
+	margin: 0 auto;
+	margin-bottom: 20px;
+	text-align: center;
+}
+label{
+	font-size: 14px;
+}
+.username,.pass{
+	width: 180px;
+	height: 35px;
+	margin: 0 auto;
+	font-size: 14px;
+}
+.submit{
+	display: block;
+	width: 120px;
+	height: 32px;
+	background: -webkit-linear-gradient(top,skyblue,blue);
+	border: none;
+	margin: 0 auto;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 700;
+	border-radius: 5px;
+}
