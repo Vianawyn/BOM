@@ -24,6 +24,7 @@
 	text-align: center;
 	color: #fff;
 	font-weight: 700;
+	display: none;
 }
 </style>
 <body>
@@ -33,13 +34,13 @@
 </html>
 <script>
 	window.onload = function(){
-		let top = document.querySelector('.top');
-		top.style.display = 'none';
+		let top1 = document.querySelector('.top');
 		window.onscroll = function(){
-			if(document.body.scrollTop > 300){
-				top.style.display = 'block';
+			var scrollTop = document.documentElement.scrollTop || document.body.scrollTop || window.scrollY || window.pageYOffset;
+			if(scrollTop > 300){
+				top1.style.display = 'block';
 			}else{
-				top.style.display = 'none';
+				top1.style.display = 'none';
 			}
 		}
 		top.onclick = function(){
